@@ -1,17 +1,28 @@
-.wrapper{
+.body{
     width:100vw ;
     height: 100vh;
+    overflow: hidden;
+    background-color: rgb(98, 173, 7);
+}
+main{
+    position: relative;
+    background-color: rgb(87, 113, 113);
+    width:100vw ;
+    height: 100vh;
+    z-index: 2;
+    transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
 }
 .nav-bar {
   position: fixed;
   padding: 2px 8px;
+  z-index: 10;
   display: flex;
   align-items: center;
   list-style-type: none;
   flex-direction: row;
   gap: 2rem;
   background-color: var(--white-2nd);
-  width: 100%;
+  width: 100vw;
   height: 2.9rem;
 }
 .nav-btn{
@@ -43,7 +54,6 @@
   font-size: 32px;
   color: brown;
 }
-
 #mode {   
   display: flex;
   flex-direction: column;
@@ -53,10 +63,15 @@
 .side-nav-tabs{
     display: none;
   }
-
-
-@media screen and (min-width: 792px) {
-    .nav-bar {
+  /* side bar for phone */
+  .toggle-btn,aside{
+display: none;}
+    
+@media screen and (min-width: 792px) {  
+  .toggle-btn,aside{
+    display:inherit;}
+  .nav-bar {
+        position: fixed;
         padding: 2px 8px;
         display: flex;
         align-items: center;
@@ -64,11 +79,10 @@
         list-style-type: none;
         flex-direction: column;
         width: 2.9rem;
-        height: 100%;
-        margin-right: auto;
+        height: 100vh;
         right: 0;
       }
-         #mode {
+       #mode {
         position: absolute; 
         top: 0;
         padding: 5px;
@@ -84,10 +98,88 @@
         list-style-type: none;
         gap: 1.5rem;
       }
+      /* side bar part */
+      
+  .toggle-btn{
+    height:3rem;
+    width: 0.9rem;
+    position: fixed;
+    z-index: 3;
+    left: 1.4%;
+    top: 0.5rem;
+    transform: translateX(-50%);
+    background-color: rgb(255, 187, 0);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform, background-color;
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+}
+.toggle-btn:hover {
+    transform: translateX(-50%) scale(1.04);
+  }
+
+.toggle-btn:active {
+    transform: translateX(-50%) scale(0.96);
+  }
+  aside{
+    overflow: hidden;
+    position: absolute;
+    height: 100vh;
+    width: 20vw;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+    overflow: hidden;
+    background-color: rgb(88, 151, 61);
+}
+#nav-links{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 2vw, 2rem);
+  margin-top: clamp(2rem, 2vw, 3rem);
+  padding: 0rem clamp(1rem, 2vw, 2rem);
+  transform: translateX(-50%) scale(0.9);
+  transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
+}
+.test{
+height:100px;
+width: 200px ;
+background-color: red;
+}
+body[data-aside="true"] > main {
+  transform: translateX(20%);
+}
+body[data-aside="true"] > .toggle-btn {
+  transform: translateX(1970%);
+  transition-duration: 400ms;
+  transition-timing-function: ease-out;
+}
+body[data-aside="true"]> aside > #nav-links{
+  transform: translateX(0%) scale(1);
+}
         }
         @media screen and (min-width: 1920px ) {
     
-            .wrapper{
-                width:1920px;
+            main{
+                max-width:1920px;
             }
             }
+            /* Hide the scrollbar */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Set the width of body and main */
+
+/* Set the max-width of main for larger screens */
+@media screen and (min-width: 1920px) {
+  main {
+    max-width: 1920px;
+  }
+}
+
