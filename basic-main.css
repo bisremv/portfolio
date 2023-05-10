@@ -14,17 +14,16 @@
 *{
 margin: 0;
 padding: 0;
+
 }
 .btn{
   border: none;
- 
   outline: none;
   box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
   cursor: pointer;
   transition: transform, background-color;
   transition-timing-function: ease;
   transition-duration: 400ms;
-
 }
 
 .btn-horizontal{
@@ -55,7 +54,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: rgb(220, 225, 214);
+    background-color: var(--white-1st);
   }
 ::-webkit-scrollbar {
     display: none;

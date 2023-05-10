@@ -74,17 +74,18 @@
     <ul id="mode" class="img-container">
       <li>
         <img
-          class="nav-btn img-btn "
+          class="nav-btn img-btn dark"
           src="icon/Icons/Contrast.png"
           alt="light dark mode"
         />
       </li>
       <li>
-        <i class="ri-sun-fill nav-btn btn "></i>
+        <img src="icon/sun-icon-8565.png" class="ri-sun-fill nav-btn img-btn light "></i>
       </li>
     </ul>
   </nav>
-  <button class="toggle-btn btn" onclick="toggleaside()"></button>
+  <button class="toggle-btn btn img-container" onclick="toggleaside()">
+  <img src="icon/arrow.png" alt=""></button>
   <aside>
     <div id="nav-links">
       <div id="profile">
@@ -316,7 +317,7 @@
   </aside>
   <main>
         <ul class="intro">
-          <li class="main-name">
+         <li> <ul class="intro-min"> <li class="main-name">
             <h1 id="name-my">I’m    Bisrat   Yared 
                 <span id="name-job" > Full stack  Developer </span>
              </h1>
@@ -324,8 +325,9 @@
           <li class="main-photo">
             <img class="photo-in" src="test/Your Image 1.png" alt="img">
           </li>
+          </ul> </li>
           <li >
-            <p class="my-opening">Hi, I'm bisrat Yared, a student software engineer currently pursuing my degree in software engineering at Adama Science and Technology University . I'm passionate about coding and love to solve complex problems with technology. I'm currently learning  Java and C++, react &bootstrap ,MySQL and PostgreSQL , React Native and Flutter
+            <p class="my-opening pge1">Hi, I'm bisrat Yared, a student software engineer currently pursuing my degree in software engineering at Adama Science and Technology University . I'm passionate about coding and love to solve complex problems with technology. I'm currently learning  Java and C++, react &bootstrap ,MySQL and PostgreSQL , React Native and Flutter
             </p>
           </li>
           <li >
@@ -340,8 +342,8 @@
             <h1>My Services
              </h1>
             </li>
-          <li >
-            <p class="my-opening">Hi, I'm bisrat Yared, a student software engineer currently pursuing my degree in software engineering at Adama Science and Technology University . I'm passionate about coding and love to solve complex problems with technology. I'm currently learning  Java and C++, react &bootstrap ,MySQL and PostgreSQL , React Native and Flutter
+          <li class="pge2">
+            <p class="my-opening ">I'm a software engineering student offering skills to build innovative digital solutions. With expertise in Java, Python, C++, and web/mobile development, I can tackle any project. Let's collaborate to enhance my learning and deliver impactful results for your business
             </p>
           </li>
           <li >
@@ -382,6 +384,7 @@
 
           </div>
         </ul>
+
   </main>
 </body>
 <script src="index.js"></script>

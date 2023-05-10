@@ -6,3 +6,10 @@ function toggleaside(){
   
   document.getElementsByClassName("nav-tabs")[0].classList.toggle("drop-down");
  });
+ 
+ document.getElementById("mode").addEventListener("click",function  (){
+  
+  document.getElementsByClassName("dark")[0].classList.toggle("changed");
+  
+  document.getElementsByClassName("light")[0].classList.toggle("changel");
+ });
