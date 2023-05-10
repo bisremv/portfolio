@@ -14,35 +14,35 @@
   <link rel="stylesheet" href="index.css" />
   
 </head>
-<body data-aside="true">
+<body data-aside="false">
   <nav class="nav-bar">
     <ul id="top-nav-menu">
       <li>
         <img
           id="menu-img"
-          class="nav-btn btn"
+          class="nav-btn img-btn"
           src="icon/menu.png"
           alt="menu"
           
         />
         <ul class="nav-tabs">
           <li>
-            <div class="nav-btn btn menu-ico btn">
+            <div class="nav-btn btn menu-ico btn img-container">
               <img src="icon/icons/Home.png " />
             </div>
           </li>
           <li>
-            <div class="nav-btn btn menu-ico btn ">
+            <div class="nav-btn btn menu-ico btn img-container ">
               <img src="icon/icons/cv.png" />
             </div>
           </li>
           <li>
-            <div class="nav-btn btn menu-ico btn">
+            <div class="nav-btn btn menu-ico btn img-container">
               <img src="icon/icons/Services.png" />
           
           </li>
           <li>
-            <div class="nav-btn btn menu-ico btn">
+            <div class="nav-btn btn menu-ico btn img-container">
               <img src="icon/icons/Contact.png" />
             </div>
           </li>
@@ -71,16 +71,16 @@
         </div>
       </li>
     </ul>
-    <ul id="mode">
+    <ul id="mode" class="img-container">
       <li>
         <img
-          class="nav-btn btn"
+          class="nav-btn img-btn "
           src="icon/Icons/Contrast.png"
           alt="light dark mode"
         />
       </li>
       <li>
-        <i class="ri-sun-fill nav-btn btn"></i>
+        <i class="ri-sun-fill nav-btn btn "></i>
       </li>
     </ul>
   </nav>
@@ -315,22 +315,73 @@
     <img class="line" src="icon/Line 4.png" alt="line separation" />
   </aside>
   <main>
-        <div class="intro">
-          <div class="main-name">
+        <ul class="intro">
+          <li class="main-name">
             <h1 id="name-my">I’m    Bisrat   Yared 
                 <span id="name-job" > Full stack  Developer </span>
              </h1>
-          </div>
-          <div class="main-photo">
+            </li>
+          <li class="main-photo">
             <img class="photo-in" src="test/Your Image 1.png" alt="img">
-          </div>
-          <div >
+          </li>
+          <li >
             <p class="my-opening">Hi, I'm bisrat Yared, a student software engineer currently pursuing my degree in software engineering at Adama Science and Technology University . I'm passionate about coding and love to solve complex problems with technology. I'm currently learning  Java and C++, react &bootstrap ,MySQL and PostgreSQL , React Native and Flutter
             </p>
-         </div>
-          <div class="Hire-me"></div>
-         </div>
+          </li>
+          <li >
+            <button id="call-to-action"  class="btn btn-horizontal ">Hire-me
+              <img src="icon/arrow.png" alt="arrow">
+            </button>
 
+          </div>
+        </ul>
+        <ul id="my-Services">
+          <li id="srv-name">
+            <h1>My Services
+             </h1>
+            </li>
+          <li >
+            <p class="my-opening">Hi, I'm bisrat Yared, a student software engineer currently pursuing my degree in software engineering at Adama Science and Technology University . I'm passionate about coding and love to solve complex problems with technology. I'm currently learning  Java and C++, react &bootstrap ,MySQL and PostgreSQL , React Native and Flutter
+            </p>
+          </li>
+          <li >
+            <ul id="Services">
+              <li class="web  card card1">
+               <div class="icon">
+                <img class="card-img" src="icon/Icons/coding.png" alt="">
+               </div>
+               <h3 class="title-name">Web Development</h3>
+               <p class="description">blog , e-commerce</p>
+              </li>
+              <li class="app  card card2">
+                <div class="icon">
+                <img class="card-img"  src="icon/app.png" alt="">
+
+                </div>
+               <h3 class="title-name">App development</h3>
+               <p class="description">coding, testing, and maintaining</p>
+              </li>
+              <li class="video card card3 ">
+                <div class="icon">
+                                  <img class="card-img" src="icon/video.png" alt="">
+
+                </div>
+                <h3 class="title-name">Video editor</h3>
+                <p class="description">music video, ad video ...</p>
+              </li>
+              <li class="ui card card1">
+                <div class="icon">
+                                  <img class="card-img" src="icon/Icons/ui.png" alt="">
+
+                </div>
+                <h3 class="title-name">UI/UX Design</h3 >
+                <p class="description">Mobile app, website design</p>
+              </li>
+            </ul>
+            </button>
+
+          </div>
+        </ul>
   </main>
 </body>
 <script src="index.js"></script>
