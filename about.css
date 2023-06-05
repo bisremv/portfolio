@@ -13,7 +13,7 @@
   height: 2.9rem;
 }
 .nav-btn {
-  height: 29px;
+  height: 18px;
 }
 .nav-tabs {
   /* background-color: var(--white-2nd); */
@@ -550,6 +550,9 @@ main {
     left: 10rem;
     top: -70rem;
   }
+}
+.nav-btn1 {
+  height: 29px;
 }
 @media screen and (min-width: 1920px) {
   .wrapper {
